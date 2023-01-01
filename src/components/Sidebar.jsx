@@ -19,6 +19,7 @@ const Sidebar = ({selectedCategory, setSelectedCategory}) => (
             <button
             className='category-btn'
             onClick={() => setSelectedCategory(category.name)}
+            key={category.name}
             style={{
                 background: category.name === selectedCategory && '#FC1503',
                 color: '#fff'
@@ -32,4 +33,4 @@ const Sidebar = ({selectedCategory, setSelectedCategory}) => (
     </Stack>
 )
 
-export default Sidebar
+export default Sidebar;

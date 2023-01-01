@@ -10,7 +10,7 @@ const VideoCard = ({ video: { id: { videoId }, snippet }}) => {
   // console.log(video)
   return (
     <Card>
-      <Link>
+      <Link to={videoId ? `/video/${videoId}` : demoVideoUrl }>
         <CardMedia image={snippet?.thumbnails?.high?.url} />
       </Link>
     </Card>
