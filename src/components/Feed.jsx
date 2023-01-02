@@ -22,15 +22,15 @@ const Feed = () => {
             />
 
             <Typography className='copyright' variant='body2' sx={{mt: 1.3, color: "#fff"}}>
-                Copyright 2022 <br/> Ancestor Tech <br/>by Bankole Olalekan.
+                Copyright 2022 <br/> Bankole Olalekan
             </Typography>
         </Box>
-        <Box p={2} sx={{ overflow: 'auto', height: '90vh', flex: 2}}>
-            <Typography variant="h4 fontweight=Bold" mb={2} sx={{color: 'white'}}>
+        <Box p={2} sx={{ overflowY: 'auto', height: '90vh', flex: 2}}>
+            <Typography variant="h4" fontweight="bold" mb={2} sx={{color: 'white'}}>
                 {selectedCategory}<span style= {{color: '#f31503'}}> Videos </span>
             </Typography>
 
-            <Videos videos={videos} />
+            <Videos videos={videos } />
         </Box>
     </Stack>
   )
