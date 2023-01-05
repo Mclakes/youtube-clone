@@ -23,8 +23,9 @@ const VideoDetail = () => {
   },  [id]);
 
   if(!videoDetail?.snippet) return 'Loading...';
+  // if(!videoDetail?.statistic) return 'Loading...';
 
-  const { snippet : { title, channelId, channelTitle }, statistic : { viewCount, likeCount} } = videoDetail;
+  const { snippet : { title, channelId, channelTitle }, statistics : { viewCount, likeCount} } = videoDetail;
 
   return (
     <Box minHeight="95vh">
@@ -37,7 +38,7 @@ const VideoDetail = () => {
             </Typography>
             <Stack direction="row" justifyContent="space-between" sx={{color: "#fff"}} py={1} px={2}>
               <Link to={`/channel/${channelId}`}>
-                <Typography variant={{ sm: "subtitle1", md: 'h6'}} color="#fff">
+                <Typography variant={{ sm: 'subtitle1', md : 'h6'}} color="#fff" >
                   {channelTitle}
                   <CheckCircle sx={{ fontSize: '12px', color: 'gray', ml: '5px'}}/>
                 </Typography>
